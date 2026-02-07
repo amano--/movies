@@ -10,6 +10,7 @@ import {
 } from "../../types/constants";
 import { NextLogo } from "./MyComp/NextLogo";
 import { NewNewsVideo } from "./NewNewsVideo";
+import { DebugCaster } from "./NewNewsVideo/DebugCaster";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -37,7 +38,15 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="NewNewsVideo"
         component={NewNewsVideo}
-        durationInFrames={46000} // Full video approx 25m 30s
+        durationInFrames={45500} // End at approx 25m 16s
+        fps={30}
+        width={1152}
+        height={648}
+      />
+      <Composition
+        id="DebugCaster"
+        component={DebugCaster}
+        durationInFrames={300}
         fps={30}
         width={1152}
         height={648}
